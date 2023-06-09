@@ -1,0 +1,62 @@
+[
+  {
+    "Command": "dokku apps",
+    "Description": "List all deployed applications",
+    "Usage": "dokku apps"
+  },
+  {
+    "Command": "dokku domains:add <app> <domain>",
+    "Description": "Add a custom domain to an application",
+    "Usage": "dokku domains:add myapp example.com"
+  },
+  {
+    "Command": "dokku domains:remove <app> <domain>",
+    "Description": "Remove a custom domain from an application",
+    "Usage": "dokku domains:remove myapp example.com"
+  },
+  {
+    "Command": "dokku logs <app>",
+    "Description": "Display the logs of an application",
+    "Usage": "dokku logs myapp"
+  },
+  {
+    "Command": "dokku ps:scale <app> <process>=<num>",
+    "Description": "Scale the number of processes for an application",
+    "Usage": "dokku ps:scale myapp web=2 worker=1"
+  },
+  {
+    "Command": "dokku config <app>",
+    "Description": "Display the environment variables for an application",
+    "Usage": "dokku config myapp"
+  },
+  {
+    "Command": "dokku config:set <app> VAR=value",
+    "Description": "Set an environment variable for an application",
+    "Usage": "dokku config:set myapp VAR=value"
+  },
+  {
+    "Command": "dokku config:unset <app> VAR",
+    "Description": "Unset an environment variable for an application",
+    "Usage": "dokku config:unset myapp VAR"
+  },
+  {
+    "Command": "dokku deploy <app>",
+    "Description": "Deploy an application",
+    "Usage": "dokku deploy myapp"
+  },
+  {
+    "Command": "dokku run <app> <command>",
+    "Description": "Run a command within an application's environment",
+    "Usage": "dokku run myapp ls -la"
+  },
+  {
+    "Command": "dokku proxy:ports-add <app> <protocol> <host-port>:<container-port>",
+    "Description": "Add a port mapping for an application",
+    "Usage": "dokku proxy:ports-add myapp tcp 8080:80"
+  },
+  {
+    "Command": "dokku proxy:ports-remove <app> <protocol> <host-port>:<container-port>",
+    "Description": "Remove a port mapping for an application",
+    "Usage": "dokku proxy:ports-remove myapp tcp 8080:80"
+  }
+]
