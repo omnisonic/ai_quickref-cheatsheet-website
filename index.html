@@ -67,7 +67,7 @@
   </style>
 </head>
 <body>
-  <h1>Dokku Commands Reference</h1>
+    <h1 id="cheatsheet-title">Commands Reference</h1>
 
   <div id="commands"></div>
 
@@ -76,40 +76,44 @@
       .then(response => response.json())
       .then(commands => {
         const commandsContainer = document.getElementById("commands");
-
-        commands.forEach(command => {
+  
+        commands.cheat_sheet.forEach(command => {
           const commandElement = document.createElement("div");
           commandElement.className = "command";
-
+  
           const titleElement = document.createElement("div");
           titleElement.className = "title";
           titleElement.textContent = command.Command;
-
+  
           const descriptionElement = document.createElement("div");
           descriptionElement.className = "description";
           descriptionElement.textContent = command.Description;
-
+  
           const usageElement = document.createElement("div");
           usageElement.className = "usage";
           usageElement.textContent = "Usage: " + command.Usage;
-
+  
           const copyButton = document.createElement("button");
           copyButton.className = "copy-button";
           copyButton.textContent = "Copy";
           copyButton.addEventListener("click", () => {
             copyToClipboard(command.Command);
           });
-
+  
           commandElement.appendChild(titleElement);
           commandElement.appendChild(descriptionElement);
           commandElement.appendChild(usageElement);
           commandElement.appendChild(copyButton);
-
+  
           commandsContainer.appendChild(commandElement);
         });
+  
+        // Set the title
+        document.title = commands.title;
+        document.getElementById("cheatsheet-title").textContent = commands.title;
       })
       .catch(error => console.error(error));
-
+  
     function copyToClipboard(text) {
       const textarea = document.createElement("textarea");
       textarea.value = text;
@@ -119,5 +123,6 @@
       document.body.removeChild(textarea);
     }
   </script>
+  
 </body>
 </html>
