@@ -1,0 +1,40 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+openai = "*"
+django = "*"
+celery = "*"
+cookiecutter = "==2.1.1"
+sh = "==2.0.4"
+binaryornot = "==0.4.4"
+black = "==23.3.0"
+isort = "==5.12.0"
+flake8 = "==6.0.0"
+django-upgrade = "==1.14.0"
+djlint = "==1.31.1"
+pre-commit = "==3.3.3"
+tox = "==4.6.3"
+pytest = "==7.4.0"
+pytest-xdist = "==3.3.1"
+pytest-cookies = "==0.7.0"
+pytest-instafail = "==0.5.0"
+pyyaml = "==6.0"
+pygithub = "==1.59.0"
+gitpython = "==3.1.31"
+jinja2 = "==3.1.2"
+requests = "==2.31.0"
+django-environ = "*"
+django-crispy-forms = "*"
+django-allauth = "*"
+django-debug-toolbar = "*"
+django-extensions = "*"
+psycopg = "*"
+crispy-bootstrap5 = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
